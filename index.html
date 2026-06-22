@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="Gas Volume">
+  <meta name="theme-color" content="#16181D">
+  <link rel="apple-touch-icon" href="data:image/png;base64,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">
+  <link rel="icon" href="data:image/png;base64,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">
+  <link rel="manifest" href="data:application/manifest+json,%7B%22name%22%3A%22Gas%20Volume%20Calculator%22%2C%22short_name%22%3A%22Gas%20Volume%22%2C%22display%22%3A%22standalone%22%2C%22background_color%22%3A%22%23F4F6F8%22%2C%22theme_color%22%3A%22%2316181D%22%7D">
+<title>Gas Line Volume &amp; Test Duration — On-site Tool</title>
+<style>
+  :root{
+    --ink:#16181D; --ink-2:#454B54; --ink-3:#737A84;
+    --line:#D8DCE2; --line-2:#E8EBEF;
+    --surface:#FFFFFF; --surface-2:#F4F6F8;
+    --panel:#171B21; --panel-2:#20262E; --panel-line:#2E3640;
+    --digit:#F1ECE0; --digit-dim:#8C93A0;
+    --accent:#C2772C;
+    --over:#C0392B; --under:#2E7D52; --star:#C2772C;
+    --radius:4px;
+    --fmono: ui-monospace,"SF Mono","Cascadia Code","Roboto Mono",Menlo,Consolas,monospace;
+    --fbody: system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+  }
+  *{box-sizing:border-box}
+  html,body{margin:0}
+  body{font-family:var(--fbody); color:var(--ink); background:var(--surface-2); line-height:1.5; -webkit-font-smoothing:antialiased}
+  .wrap{max-width:880px; margin:0 auto; padding:22px 16px 64px}
+
+  header{border-bottom:2px solid var(--ink); padding-bottom:14px; margin-bottom:20px}
+  .eyebrow{font-size:11px; letter-spacing:.18em; text-transform:uppercase; color:var(--accent); font-weight:700}
+  h1{font-size:clamp(22px,4.6vw,29px); line-height:1.1; margin:6px 0 4px; letter-spacing:-.01em}
+  .sub{color:var(--ink-2); font-size:13.5px; max-width:66ch}
+
+  .card{background:var(--surface); border:1px solid var(--line); border-radius:var(--radius); margin-bottom:16px}
+  .card-h{padding:11px 16px; border-bottom:1px solid var(--line-2); display:flex; align-items:baseline; gap:10px; flex-wrap:wrap}
+  .card-h .n{font-family:var(--fmono); font-size:12px; color:var(--accent); font-weight:700}
+  .card-h h2{font-size:14px; margin:0; letter-spacing:.01em}
+  .card-h .tag{margin-left:auto; font-family:var(--fmono); font-size:11px; color:var(--ink-3)}
+  .card-b{padding:14px 16px}
+
+  .rows{display:flex; flex-direction:column; gap:10px}
+  .row{display:grid; grid-template-columns:1.9fr .7fr 1fr .75fr .85fr auto; gap:8px; align-items:end;
+       background:var(--surface-2); border:1px solid var(--line); border-radius:var(--radius); padding:10px}
+  .row .lab{font-size:10.5px; letter-spacing:.04em; text-transform:uppercase; color:var(--ink-3); font-weight:600; margin-bottom:4px; display:block}
+  .row input, .row select{font:inherit; width:100%; border:1px solid var(--line); border-radius:var(--radius); background:#fff; color:var(--ink); padding:8px 9px; font-size:14px}
+  .row input{font-family:var(--fmono); font-variant-numeric:tabular-nums}
+  .row input:focus, .row select:focus{outline:0; border-color:var(--accent); box-shadow:0 0 0 1px var(--accent)}
+  .row .vcell{font-family:var(--fmono); font-variant-numeric:tabular-nums; font-size:14px; padding:8px 4px; color:var(--ink-2); white-space:nowrap}
+  .row .vcell b{color:var(--ink)}
+  .row .del{border:1px solid var(--line); background:#fff; color:var(--ink-3); border-radius:var(--radius); width:34px; height:36px; cursor:pointer; font-size:16px; line-height:1}
+  .row .del:hover{border-color:var(--over); color:var(--over)}
+  .hint{font-size:10px; color:var(--ink-3); font-family:var(--fmono); margin-top:4px; min-height:12px}
+  .hint.warn{color:var(--accent); font-weight:700}
+  .controls{display:flex; gap:10px; margin-top:14px; flex-wrap:wrap}
+  button.act{font:inherit; cursor:pointer; border-radius:var(--radius); padding:9px 14px; font-size:13.5px; font-weight:600}
+  button.add{background:var(--ink); color:#fff; border:1px solid var(--ink)} button.add:hover{background:#000}
+  button.reset{background:#fff; color:var(--ink-2); border:1px solid var(--line)} button.reset:hover{border-color:var(--ink-3)}
+  button.act:focus-visible{outline:2px solid var(--accent); outline-offset:2px}
+
+  .readout{background:var(--panel); border-color:var(--panel); color:var(--digit)}
+  .readout .card-h{border-bottom:1px solid var(--panel-line)}
+  .readout .card-h h2{color:#fff} .readout .card-h .tag{color:var(--digit-dim)}
+  .rgrid{display:grid; grid-template-columns:repeat(3,1fr); gap:1px; background:var(--panel-line)}
+  .cell{background:var(--panel); padding:15px 14px}
+  .cell .k{font-size:10.5px; letter-spacing:.12em; text-transform:uppercase; color:var(--digit-dim)}
+  .cell .v{font-family:var(--fmono); font-variant-numeric:tabular-nums; font-size:27px; line-height:1.05; margin-top:7px; letter-spacing:-.01em}
+  .cell .u{font-size:13px; color:var(--digit-dim); margin-left:3px}
+  .cell .note{font-size:11px; color:var(--digit-dim); margin-top:5px; line-height:1.35}
+  .v.amber{color:#E0A94C} .v.under{color:#6FC79A} .v.over{color:#E8857B}
+  .instr{background:var(--panel-2); padding:13px 16px; font-size:12.5px; color:var(--digit); line-height:1.5}
+  .instr b{color:#fff}
+
+  /* Table E.6 reference */
+  .e6status{font-family:var(--fmono); font-size:12.5px; color:var(--ink-2); background:var(--surface-2); border:1px solid var(--line); border-radius:var(--radius); padding:9px 12px; margin:0 0 12px}
+  .e6status b{color:var(--accent)}
+  table.e6{border-collapse:collapse; width:100%; max-width:360px; font-size:13px}
+  .e6 th,.e6 td{text-align:left; padding:8px 12px; border-bottom:1px solid var(--line-2)}
+  .e6 th{font-size:10.5px; letter-spacing:.05em; text-transform:uppercase; color:var(--ink-3); font-weight:600}
+  .e6 td.num{font-family:var(--fmono); font-variant-numeric:tabular-nums}
+  .e6 tbody tr.hl{background:#FBF4EA; box-shadow:inset 3px 0 0 var(--accent)}
+  .e6 tbody tr.hl td{color:var(--ink); font-weight:700}
+  .e6foot{font-size:11.5px; color:var(--ink-3); margin:12px 0 0; line-height:1.45}
+
+  .ref p{margin:0 0 9px; font-size:13px; color:var(--ink-2)}
+  .ref p strong{color:var(--ink)}
+  .clause{font-family:var(--fmono); font-size:12px; color:var(--accent); font-weight:700}
+  .howintro{font-size:13px; color:var(--ink-2); margin:0 0 10px}
+  .howlist{margin:0 0 12px; padding-left:20px}
+  .howlist li{font-size:13px; color:var(--ink-2); margin-bottom:8px; line-height:1.55}
+  .howlist li b{color:var(--ink)}
+  .howfoot{font-size:12.5px; color:var(--ink-2); background:var(--surface-2); border:1px solid var(--line); border-left:3px solid var(--accent); border-radius:var(--radius); padding:10px 12px; margin:0 0 12px}
+  .howfoot b{font-family:var(--fmono); color:var(--ink)}
+  .worked{font-size:12.5px; color:var(--ink-2); line-height:1.8; margin:6px 0 12px; background:var(--surface-2); border:1px solid var(--line); border-radius:var(--radius); padding:10px 12px; font-variant-numeric:tabular-nums}
+  .worked b{color:var(--ink)}
+  .d41wrap{overflow-x:auto; -webkit-overflow-scrolling:touch; margin-top:4px; border:1px solid var(--line); border-radius:var(--radius)}
+  table.d41{border-collapse:collapse; width:100%; min-width:600px; font-size:12px}
+  .d41 th,.d41 td{text-align:right; padding:6px 10px; border-bottom:1px solid var(--line-2); white-space:nowrap}
+  .d41 th:first-child,.d41 td:first-child{text-align:left}
+  .d41 thead th{vertical-align:bottom; border-bottom:1px solid var(--line); background:var(--surface-2); white-space:normal; line-height:1.25}
+  .d41 .mh{display:block; font-size:11px; color:var(--ink); font-weight:700; text-transform:none; letter-spacing:0}
+  .d41 .sh{display:block; font-size:9.5px; color:var(--ink-3); font-weight:600; text-transform:none; letter-spacing:0; margin-top:2px}
+  .d41 thead th:first-child{font-size:10px; color:var(--ink-3); text-transform:uppercase; font-weight:700}
+  .d41 td{font-family:var(--fmono); font-variant-numeric:tabular-nums; color:var(--ink-2)}
+  .d41 td:first-child{font-weight:700; color:var(--ink)}
+  .d41 td.na{color:#B8BEC6}
+  .d41 tbody tr:hover{background:var(--surface-2)}
+  .d41legend{font-size:11.5px; color:var(--ink-3); margin:8px 0 0; line-height:1.6}
+  .d41note{font-size:11.5px; color:var(--ink-3); margin:8px 0 0; line-height:1.5}
+  .pexbox{margin-top:12px; border:1px solid #E7D4B5; background:#FBF4EA; border-left:3px solid var(--accent); border-radius:var(--radius); padding:11px 13px}
+  .pexh{font-size:12.5px; font-weight:700; color:#5C4A2E}
+  .pexnote{font-size:12px; color:#6B5836; margin:6px 0 8px; line-height:1.5}
+  .pexvals{font-family:var(--fmono); font-variant-numeric:tabular-nums; font-size:12.5px; color:var(--ink); line-height:1.8}
+  .clausefoot{font-size:12px; color:var(--ink-3); margin:12px 0 0; line-height:1.7}
+  .callout{background:#FBF4EA; border:1px solid #E7D4B5; border-left:3px solid var(--accent); padding:11px 13px; border-radius:var(--radius); font-size:12.5px; color:#5C4A2E; margin:0 0 12px}
+  .grphd{font-size:10.5px; letter-spacing:.1em; text-transform:uppercase; color:var(--ink-3); font-weight:700; margin:4px 0 2px}
+  .grphd.first{margin-top:0}
+  .matlist{list-style:none; margin:2px 0 12px; padding:0}
+  .matlist li{padding:9px 0; border-bottom:1px solid var(--line-2); font-size:13px}
+  .matlist li:last-child{border-bottom:0}
+  .matlist .nm{font-weight:700; color:var(--ink)}
+  .matlist .std{color:var(--ink-2)} .matlist .note2{color:var(--ink-3); font-size:12px}
+  .star{color:var(--star); font-weight:700}
+  .badge{font-family:var(--fmono); font-size:10px; font-weight:700; padding:1px 6px; border-radius:3px; margin-left:6px; vertical-align:1px}
+  .badge.ok{background:#E4F1EA; color:var(--under)} .badge.cf{background:#FBF1E2; color:var(--accent)}
+  footer{font-size:11.5px; color:var(--ink-3); margin-top:8px; line-height:1.5}
+
+  @media (max-width:720px){
+    .row{grid-template-columns:1fr 1fr; gap:8px 10px}
+    .row .f-mat{grid-column:1 / -1}
+    .row .f-vol{grid-column:1 / -1}
+    .row .f-del{grid-column:1 / -1; justify-self:end}
+    .rgrid{grid-template-columns:1fr}
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header>
+    <div class="eyebrow">AS/NZS 5601.1:2022 · Appendix D · Table D.4.1</div>
+    <h1>Gas line volume &amp; test duration</h1>
+    <p class="sub">Add a row for each pipe size — branches included. The three you'll pick most (copper Type B, steel, gas PEX) sit at the top, marked ★. Volume drives the test duration and lights up the matching Table E.6 row below.</p>
+  </header>
+
+  <section class="card">
+    <div class="card-h"><span class="n">01</span><h2>Pipe sections</h2><span class="tag">main run + every branch</span></div>
+    <div class="card-b">
+      <div class="rows" id="rows"></div>
+      <div class="controls">
+        <button class="act add" id="addBtn">+ Add section</button>
+        <button class="act reset" id="resetBtn">Clear all</button>
+      </div>
+    </div>
+  </section>
+
+  <section class="card readout">
+    <div class="card-h"><span class="n" style="color:var(--accent)">02</span><h2>Result</h2><span class="tag" id="rowCount">—</span></div>
+    <div class="rgrid">
+      <div class="cell"><div class="k">Total pipe volume</div><div class="v amber" id="oVol">0.00<span class="u">L</span></div><div class="note">all sections + branches</div></div>
+      <div class="cell"><div class="k">Against 30 L</div><div class="v under" id="oThr">Under</div><div class="note" id="oThrn">small-volume installation</div></div>
+      <div class="cell"><div class="k">Required test duration</div><div class="v amber" id="oDur">5<span class="u">min</span></div><div class="note" id="oDurn">up to 30 L = 5 min</div></div>
+    </div>
+    <div class="instr" id="instr">Add a section to size the test.</div>
+  </section>
+
+  <section class="card ref" id="e6card">
+    <div class="card-h"><span class="n">03</span><h2>Allowable drop — Table E.6</h2><span class="tag">New Zealand only</span></div>
+    <div class="card-b">
+      <div class="callout"><strong>Victoria has no allowable drop to read off this.</strong> Anything you've worked on passes on <em>no loss of pressure</em>; an existing-installation leakage test uses the figure ESV (the Technical Regulator) sets, if any. The table below is the New Zealand benchmark — use it for context, not as a Victorian permission.</div>
+      <div class="e6status" id="e6status">Work out a volume above and the matching row will highlight.</div>
+      <table class="e6">
+        <thead><tr><th>Pipe volume (L)</th><th>Max drop (kPa)</th></tr></thead>
+        <tbody id="e6body">
+          <tr data-ceil="5"><td class="num">up to 5</td><td class="num">1.0</td></tr>
+          <tr data-ceil="10"><td class="num">10</td><td class="num">0.5</td></tr>
+          <tr data-ceil="15"><td class="num">15</td><td class="num">0.35</td></tr>
+          <tr data-ceil="20"><td class="num">20</td><td class="num">0.25</td></tr>
+          <tr data-ceil="25"><td class="num">25</td><td class="num">0.2</td></tr>
+          <tr data-ceil="30"><td class="num">30</td><td class="num">0.1</td></tr>
+        </tbody>
+      </table>
+      <p class="e6foot">Read to the next volume step up — the conservative figure — since a larger volume is allowed a smaller drop. Applies to existing installations up to 30 L; above 30 L the table doesn't extend. And the drop you compare must be a <em>real</em> loss: rule temperature out first, or a within-tolerance reading can just be the gas cooling.</p>
+    </div>
+  </section>
+
+  <section class="card ref">
+    <div class="card-h"><span class="n">04</span><h2>What the materials are</h2></div>
+    <div class="card-b">
+      <div class="grphd first"><span class="star">★</span> The three you'll meet most</div>
+      <ul class="matlist">
+        <li><span class="nm"><span class="star">★</span> Copper — AS 1432 Type B</span><span class="badge ok">verified</span><br>
+          <span class="std">AS 1432, Copper tubes for plumbing, gasfitting and drainage applications.</span>
+          <span class="note2"> <strong>Your standard, most-common copper.</strong> Type B is the medium wall grade (A thickest, C thinnest) — general-purpose gas, above or below ground. The grade the gas standard sizes on.</span></li>
+        <li><span class="nm"><span class="star">★</span> Steel — AS 1074 Medium</span><span class="badge ok">verified</span><br>
+          <span class="std">AS 1074, Steel tubes and tubulars for ordinary service — Medium wall grade.</span>
+          <span class="note2"> The standard threaded gas pipe. Black or galvanised share the same bore, so one row covers both — galv is only a zinc coating.</span></li>
+        <li><span class="nm"><span class="star">★</span> PE-X — gas PEX / Duopex</span><span class="badge cf">confirm</span><br>
+          <span class="std">AS 2492, Cross-linked polyethylene (PE-X) pipes; gas fittings to AS 2537.5.</span>
+          <span class="note2"> <strong>Your common flexible gas plastic</strong> — the coil you run above ground and in walls. <strong>Not in Table D.4.1</strong>, so L/m here is computed from the bore and must be confirmed against the pipe spec. If it's a multilayer PEX-AL-PEX, use the manufacturer's bore.</span></li>
+      </ul>
+      <div class="grphd">Others in Table D.4.1</div>
+      <ul class="matlist">
+        <li><span class="nm">Copper — NZS 3501 (NZ)</span><span class="badge ok">verified</span><br>
+          <span class="std">NZS 3501, Specification for copper tubes for water, gas and sanitation.</span>
+          <span class="note2"> The New Zealand copper, slightly different bores.</span></li>
+        <li><span class="nm">Polyethylene (PE) — AS/NZS 4130</span><span class="badge cf">confirm</span><br>
+          <span class="std">AS/NZS 4130, Polyethylene (PE) pipes for pressure applications — series 2, SDR 11.</span>
+          <span class="note2"> The <strong>buried</strong> poly main/service (black, yellow stripe). <strong>This is NOT your PEX</strong> — different material from the cross-linked PE-X above.</span></li>
+        <li><span class="nm">PVC-HI — AS ISO 6993.1</span><span class="badge cf">confirm</span><br>
+          <span class="std">AS ISO 6993.1, Buried high-impact PVC (PVC-HI) piping for gaseous fuels — to max 1 bar (100 kPa).</span>
+          <span class="note2"> Buried gas only.</span></li>
+        <li><span class="nm">Polyamide (PA / nylon) — AS 2944.1</span><span class="badge cf">confirm</span><br>
+          <span class="std">AS 2944.1, polyamide pressure pipe for gaseous fuels — SDR 25 (thin wall).</span>
+          <span class="note2"> Buried gas; uncommon in domestic work. Confirm the exact standard title against your copy.</span></li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="card ref">
+    <div class="card-h"><span class="n">05</span><h2>How it's worked out</h2></div>
+    <div class="card-b">
+      <p class="howintro">You don't work any of this out by hand — the tool does it as you fill the rows. All it's doing is:</p>
+      <ol class="howlist">
+        <li><b>You pick the material and size</b> — the tool fills in the volume per metre. That figure comes from Table D.4.1 in the standard and is already built in, so there's no separate chart to look at.</li>
+        <li><b>You type the length</b> — that section's volume is the per-metre figure times the length.</li>
+        <li><b>It adds up every section</b> — main run plus all branches — to give the total volume.</li>
+        <li><b>The total sets your test time</b> — 5 minutes up to 30 L, plus another 5 minutes for every extra 30 L.</li>
+      </ol>
+      <p class="howfoot">The only time a formula comes into it is a pipe that <em>isn't</em> in the list. Then volume per metre = <b>0.0007854 × bore²</b> (bore in mm, off the pipe spec). Everything in the dropdown already has its figure.</p>
+      <p class="clausefoot"><span class="clause">D.4.1</span> volume &nbsp;·&nbsp; <span class="clause">E.2</span> test duration &nbsp;·&nbsp; <span class="clause">E.6</span> allowable drop (NZ only; Australia per the Technical Regulator).</p>
+    </div>
+  </section>
+
+  <section class="card ref">
+    <div class="card-h"><span class="n">06</span><h2>Working it out by hand</h2><span class="tag">to check the tool</span></div>
+    <div class="card-b">
+      <p class="howintro">Two routes, same answer. Either one lets you sanity-check the tool without it.</p>
+
+      <div class="grphd first">Route A — straight off the chart, no formula</div>
+      <ol class="howlist">
+        <li>Read each pipe size's litres-per-metre off <b>Table D.4.1</b> (AS/NZS 5601.1) — the L/m chart by material and size.</li>
+        <li>Multiply that L/m by the length of that size, in metres.</li>
+        <li>Add every section — main run plus branches — for the total volume.</li>
+      </ol>
+
+      <div class="grphd">Route B — from the pipe bore (for anything not in the chart, e.g. PEX)</div>
+      <ol class="howlist">
+        <li>Get the internal bore in mm — off the pipe spec, or <b>AS/NZS 3500.1 Table A.1–A.3</b> (internal diameters by material).</li>
+        <li>Volume per metre = <b>0.0007854 × bore × bore</b>. The 0.0007854 is just π ÷ 4 ÷ 1000.</li>
+        <li>Then multiply by length and add the sections, the same as Route A.</li>
+      </ol>
+
+      <div class="grphd">Worked example — copper Type B</div>
+      <p class="worked">
+        12 m of DN20 (bore 17.0 mm): 0.0007854 × 17 × 17 = <b>0.227</b> L/m → × 12 = <b>2.72 L</b><br>
+        4 m of DN15 (bore 10.9 mm): 0.0007854 × 10.9 × 10.9 = <b>0.093</b> L/m → × 4 = <b>0.37 L</b><br>
+        Total = 2.72 + 0.37 = <b>3.09 L</b> → under 30 L → <b>5-minute test</b>
+      </p>
+      <p class="howfoot">Off Table D.4.1 instead (0.22 and 0.09 L/m) you'd get 3.0 L — the same to within rounding. The chart is rounded to two decimals; the tool works from the exact bore, so a few thousandths' difference is rounding, not a fault.</p>
+
+      <div class="grphd">Test time, by hand</div>
+      <p class="worked">
+        Up to 30 L → 5 min.<br>
+        Over 30 L → divide the total by 30, round <b>up</b> to the next whole number, × 5 min.<br>
+        Example — 65 L: 65 ÷ 30 = 2.17 → round up to 3 → 3 × 5 = <b>15 min</b>.
+      </p>
+    </div>
+  </section>
+
+  <section class="card ref">
+    <div class="card-h"><span class="n">07</span><h2>Table D.4.1 — volume per metre (L/m)</h2><span class="tag">AS/NZS 5601.1</span></div>
+    <div class="card-b">
+      <div class="d41wrap">
+        <table class="d41">
+          <thead><tr>
+            <th>DN</th>
+            <th><span class="mh">Copper</span><span class="sh">NZS 3501 · NZ</span></th>
+            <th><span class="mh">Copper <span class="star">★</span></span><span class="sh">AS 1432 B · AU std</span></th>
+            <th><span class="mh">Steel</span><span class="sh">AS 1074 Med</span></th>
+            <th><span class="mh">PVC-HI</span><span class="sh">ISO 6993.1</span></th>
+            <th><span class="mh">Polyethylene</span><span class="sh">buried main · NOT PEX</span></th>
+            <th><span class="mh">Polyamide</span><span class="sh">nylon · AS 2944.1</span></th>
+          </tr></thead>
+          <tbody>
+            <tr><td>15</td><td>0.13</td><td>0.09</td><td>0.21</td><td>0.25</td><td class="na">—</td><td class="na">—</td></tr>
+            <tr><td>16</td><td class="na">—</td><td class="na">—</td><td class="na">—</td><td class="na">—</td><td>0.07*</td><td>0.15</td></tr>
+            <tr><td>18</td><td class="na">—</td><td>0.15</td><td class="na">—</td><td class="na">—</td><td class="na">—</td><td>0.20</td></tr>
+            <tr><td>20</td><td>0.28</td><td>0.22</td><td>0.37</td><td>0.39</td><td>0.15</td><td>0.25</td></tr>
+            <tr><td>23</td><td class="na">—</td><td class="na">—</td><td class="na">—</td><td class="na">—</td><td class="na">—</td><td>0.34</td></tr>
+            <tr><td>25</td><td>0.50</td><td>0.41</td><td>0.59</td><td>0.66</td><td>0.28</td><td>0.41</td></tr>
+            <tr><td>32</td><td>0.79</td><td>0.67</td><td>1.02</td><td>1.10</td><td>0.52</td><td>0.67</td></tr>
+            <tr><td>40</td><td>1.14</td><td>0.99</td><td>1.39</td><td>1.44</td><td>0.82</td><td>1.05</td></tr>
+            <tr><td>50</td><td>2.03</td><td>1.83</td><td>2.21</td><td>2.76</td><td>1.29</td><td>1.65</td></tr>
+            <tr><td>63</td><td class="na">—</td><td class="na">—</td><td class="na">—</td><td class="na">—</td><td>2.04</td><td>2.64</td></tr>
+            <tr><td>65</td><td>3.16</td><td>2.92</td><td>3.72</td><td>3.72</td><td class="na">—</td><td class="na">—</td></tr>
+            <tr><td>75</td><td class="na">—</td><td class="na">—</td><td class="na">—</td><td class="na">—</td><td>2.92</td><td>3.71</td></tr>
+            <tr><td>80</td><td>4.55</td><td>4.17</td><td>5.13</td><td>5.19</td><td class="na">—</td><td class="na">—</td></tr>
+            <tr><td>90</td><td>6.24</td><td>5.75</td><td class="na">—</td><td>6.74</td><td>4.19</td><td>5.32</td></tr>
+            <tr><td>100</td><td>8.10</td><td>7.58</td><td>8.68</td><td>8.59</td><td class="na">—</td><td class="na">—</td></tr>
+            <tr><td>110</td><td class="na">—</td><td class="na">—</td><td class="na">—</td><td class="na">—</td><td>6.28</td><td>7.95</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="pexbox">
+        <div class="pexh"><span class="star">★</span> Gas PEX (Gaspex · Duopex · Tradepex) — not in Table D.4.1</div>
+        <p class="pexnote">These domestic flexible pipes are PE-X (cross-linked polyethylene, AS 2492) — <strong>not</strong> the "Polyethylene" column above, which is the buried main. The standard doesn't tabulate PEX, so use these typical L/m or work from the actual bore, and confirm against the pipe spec:</p>
+        <div class="pexvals">DN16 0.135 &nbsp;·&nbsp; DN20 0.214 &nbsp;·&nbsp; DN25 0.337 &nbsp;·&nbsp; DN32 0.552 &nbsp;·&nbsp; DN40 0.855 &nbsp;·&nbsp; DN50 1.333</div>
+      </div>
+      <p class="d41legend"><span class="star">★</span> = the common copper used in Australia — AS 1432 Type B. The other copper column (NZS 3501) is New Zealand. &nbsp;—&nbsp;means that size isn't made in that material.</p>
+      <p class="d41note">Figures as published in Table D.4.1, rounded to two decimals. The tool computes from the exact bore, so it may read a touch finer (e.g. 0.227 vs 0.22) — same volume. Copper and steel are verified; plastic figures should be confirmed against your copy. *PE DN16 (0.07) looks inconsistent for that size — check it. PE-X (gas PEX) isn't in this table; work it from the bore.</p>
+    </div>
+  </section>
+
+  <footer>
+    Built on AS/NZS 5601.1:2022 Table D.4.1 (volume), Appendix E (test duration) and Table E.6 (NZ allowable drop). Copper and steel L/m are verified; PE-X and the plastic rows are computed/table figures to confirm against the pipe spec or a licensed copy. The editable L/m field is the source of truth for each section.
+  </footer>
+
+</div>
+
+<script>
+(function(){
+  var $ = function(id){return document.getElementById(id);};
+
+  var MAT = {
+    "cuB": {label:"★ Copper — AS 1432 Type B (most common copper)", verify:false, d:{
+      15:{lpm:0.093,id:10.9},18:{lpm:0.150,id:13.8},20:{lpm:0.227,id:17.0},25:{lpm:0.415,id:23.0},
+      32:{lpm:0.674,id:29.3},40:{lpm:1.001,id:35.7},50:{lpm:1.840,id:48.4},65:{lpm:2.932,id:61.1},
+      80:{lpm:4.174,id:72.9},100:{lpm:7.590,id:98.3}}},
+    "steel":{label:"★ Steel — AS 1074 Medium (black/galvanised)", verify:false, d:{
+      15:{lpm:0.204,id:16.1},20:{lpm:0.370,id:21.7},25:{lpm:0.585,id:27.3},32:{lpm:1.018,id:36.0},
+      40:{lpm:1.379,id:41.9},50:{lpm:2.214,id:53.1},65:{lpm:3.728,id:68.9},80:{lpm:5.140,id:80.9},
+      100:{lpm:8.706,id:105.3}}},
+    "pex": {label:"★ PE-X — gas PEX / Duopex (AS 2492)", verify:true, notD41:true, d:{
+      16:{lpm:0.135},20:{lpm:0.214},25:{lpm:0.337},32:{lpm:0.552},40:{lpm:0.855},50:{lpm:1.333}}},
+    "cuNZ":{label:"Copper — NZS 3501 (NZ)", verify:false, d:{
+      15:{lpm:0.127,id:12.7},20:{lpm:0.284,id:19.0},25:{lpm:0.507,id:25.4},32:{lpm:0.794,id:31.8},
+      40:{lpm:1.140,id:38.1},50:{lpm:2.027,id:50.8},65:{lpm:3.167,id:63.5},80:{lpm:4.560,id:76.2},
+      100:{lpm:8.108,id:101.6}}},
+    "pe":  {label:"Polyethylene (PE) — AS/NZS 4130 (buried main, not PEX)", verify:true, d:{
+      20:{lpm:0.15},25:{lpm:0.28},32:{lpm:0.52},40:{lpm:0.82},50:{lpm:1.29},63:{lpm:2.04},
+      75:{lpm:2.92},90:{lpm:4.19},110:{lpm:6.28}}},
+    "pvc": {label:"PVC-HI — AS ISO 6993.1 (buried gas)", verify:true, d:{
+      15:{lpm:0.25},20:{lpm:0.39},25:{lpm:0.66},32:{lpm:1.10},40:{lpm:1.44},50:{lpm:2.76},
+      65:{lpm:3.72},80:{lpm:5.19},90:{lpm:6.74},100:{lpm:8.59}}},
+    "pa":  {label:"Polyamide (PA/nylon) — AS 2944.1 SDR 25 (buried)", verify:true, d:{
+      16:{lpm:0.15},18:{lpm:0.20},20:{lpm:0.25},23:{lpm:0.34},25:{lpm:0.41},32:{lpm:0.67},
+      40:{lpm:1.05},50:{lpm:1.65},63:{lpm:2.64},75:{lpm:3.71},90:{lpm:5.32},110:{lpm:7.95}}},
+    "cust":{label:"Custom — enter L/m", verify:false, d:{}}
+  };
+
+  var E6 = [{c:5,d:"1.0"},{c:10,d:"0.5"},{c:15,d:"0.35"},{c:20,d:"0.25"},{c:25,d:"0.2"},{c:30,d:"0.1"}];
+
+  var rows = [], seq = 0, container = $("rows");
+
+  function matOptions(sel){
+    return Object.keys(MAT).map(function(k){
+      return '<option value="'+k+'"'+(k===sel?' selected':'')+'>'+MAT[k].label+'</option>';
+    }).join("");
+  }
+  function dnOptions(mat, sel){
+    var keys = Object.keys(MAT[mat].d);
+    var opts = '<option value="">—</option>';
+    opts += keys.map(function(d){
+      return '<option value="'+d+'"'+(String(d)===String(sel)?' selected':'')+'>DN'+d+'</option>';
+    }).join("");
+    return opts;
+  }
+  function hintFor(r){
+    if(r.mat==="cust") return "L/m = 0.0007854 × Ø²";
+    var rec = MAT[r.mat].d[r.dn];
+    if(!rec) return "";
+    if(rec.id!=null) return "Ø "+rec.id+" mm";
+    if(MAT[r.mat].notD41) return "not in D.4.1 — confirm";
+    return "Table D.4.1 — confirm";
+  }
+
+  function render(){
+    container.innerHTML = "";
+    rows.forEach(function(r){
+      var div = document.createElement("div");
+      div.className="row"; div.dataset.id=r.id;
+      var vol = (r.lpm>0 && r.len>0)? r.lpm*r.len : 0;
+      var warn = (r.mat!=="cust" && MAT[r.mat].verify && r.lpm>0);
+      div.innerHTML =
+        '<div class="f-mat"><label class="lab">Material</label><select class="mat">'+matOptions(r.mat)+'</select></div>'+
+        '<div class="f-dn"><label class="lab">Size</label><select class="dn"'+(r.mat==="cust"?' disabled':'')+'>'+dnOptions(r.mat,r.dn)+'</select></div>'+
+        '<div class="f-lpm"><label class="lab">Volume L/m</label><input class="lpm" type="number" inputmode="decimal" step="0.001" value="'+(r.lpm||"")+'" placeholder="L/m">'+
+            '<div class="hint'+(warn?' warn':'')+'">'+(warn?(MAT[r.mat].notD41?'confirm bore':'verify'):hintFor(r))+'</div></div>'+
+        '<div class="f-len"><label class="lab">Length</label><input class="len" type="number" inputmode="decimal" step="0.1" value="'+(r.len||"")+'" placeholder="m"></div>'+
+        '<div class="f-vol"><label class="lab">Section</label><div class="vcell"><b>'+vol.toFixed(3)+'</b> L</div></div>'+
+        '<div class="f-del"><button class="del" title="Remove">×</button></div>';
+      container.appendChild(div);
+
+      div.querySelector(".mat").addEventListener("change", function(e){
+        r.mat=e.target.value; r.dn=""; r.lpm=0; render(); compute();
+      });
+      div.querySelector(".dn").addEventListener("change", function(e){
+        r.dn=e.target.value; var rec=MAT[r.mat].d[r.dn]; if(rec) r.lpm=rec.lpm; render(); compute();
+      });
+      div.querySelector(".lpm").addEventListener("input", function(e){
+        r.lpm=parseFloat(e.target.value)||0;
+        div.querySelector(".f-vol .vcell b").textContent=((r.lpm>0&&r.len>0)?r.lpm*r.len:0).toFixed(3); compute();
+      });
+      div.querySelector(".len").addEventListener("input", function(e){
+        r.len=parseFloat(e.target.value)||0;
+        div.querySelector(".f-vol .vcell b").textContent=((r.lpm>0&&r.len>0)?r.lpm*r.len:0).toFixed(3); compute();
+      });
+      div.querySelector(".del").addEventListener("click", function(){
+        rows=rows.filter(function(x){return x.id!==r.id;}); render(); compute();
+      });
+    });
+  }
+
+  function addRow(mat){ seq++; rows.push({id:seq, mat:mat||"cuB", dn:"", lpm:0, len:0}); render(); compute(); }
+
+  function updateE6(total, dur){
+    var trs = $("e6body").querySelectorAll("tr");
+    trs.forEach(function(t){ t.classList.remove("hl"); });
+    var status = $("e6status");
+    if(total<=0){ status.innerHTML="Work out a volume above and the matching row will highlight."; return; }
+    if(total>30){
+      status.innerHTML = total.toFixed(2)+" L is beyond Table E.6 (it stops at 30 L). No NZ tabulated drop — and in Victoria it's no-loss / ESV regardless.";
+      return;
+    }
+    var idx=0; for(var i=0;i<E6.length;i++){ if(total<=E6[i].c){ idx=i; break; } }
+    trs[idx].classList.add("hl");
+    status.innerHTML = total.toFixed(2)+" L → maximum allowable drop <b>"+E6[idx].d+" kPa</b> over the "+dur+"-minute test."+
+      "<br><span style=\"color:var(--ink-3)\">Table E.6, New Zealand benchmark only — Victoria stays no-loss / ESV.</span>";
+  }
+
+  function compute(){
+    var total=0, anyCheck=false, anyPex=false;
+    rows.forEach(function(r){
+      if(r.lpm>0 && r.len>0) total += r.lpm*r.len;
+      if(r.mat!=="cust" && MAT[r.mat].verify && r.lpm>0) anyCheck=true;
+      if(r.mat==="pex" && r.lpm>0) anyPex=true;
+    });
+    $("oVol").innerHTML = total.toFixed(2)+'<span class="u">L</span>';
+    $("rowCount").textContent = rows.length+(rows.length===1?" section":" sections");
+
+    var thr=$("oThr"), thrn=$("oThrn");
+    if(total<=30){ thr.className="v under"; thr.textContent="Under"; thrn.textContent="small-volume installation (≤30 L)"; }
+    else { thr.className="v over"; thr.textContent="Over"; thrn.textContent="exceeds 30 L — extended test period"; }
+
+    var units = total>0 ? Math.max(1, Math.ceil(total/30)) : 1, dur=units*5;
+    $("oDur").innerHTML = dur+'<span class="u">min</span>';
+    $("oDurn").textContent = total<=30 ? "up to 30 L = 5 min" : units+" × 5 min ("+total.toFixed(1)+" L)";
+
+    var msg;
+    if(total<=0) msg="Add a section to size the test.";
+    else if(total<=30) msg="<b>Up to 30 L:</b> bubble leak detector (existing only), water or digital manometer, or single-column compensated gauge all suit. Carry a digital and a water gauge to cross-check.";
+    else if(total<=300) msg="<b>30–300 L:</b> water or digital manometer (test time "+dur+" min). Digital is steadier for setting and reading; the water gauge is the cross-check.";
+    else msg="<b>Over 300 L:</b> differential tester or electronic transducer/recorder — these cover any volume. Test time "+dur+" min.";
+    if(anyPex) msg += " <b>PE-X note:</b> gas PEX isn't in Table D.4.1 — its L/m is computed from a typical bore. Confirm against the actual pipe (e.g. Duopex) spec.";
+    else if(anyCheck) msg += " <b>Note:</b> a plastic figure is flagged for confirmation — check it against Table D.4.1 or the pipe spec.";
+    $("instr").innerHTML = msg;
+
+    updateE6(total, dur);
+  }
+
+  $("addBtn").addEventListener("click", function(){ addRow("cuB"); });
+  $("resetBtn").addEventListener("click", function(){ rows=[]; addRow("cuB"); });
+  addRow("cuB");
+})();
+</script>
+<script>
+  if ("serviceWorker" in navigator && location.protocol.startsWith("http")) {
+    window.addEventListener("load", function(){
+      navigator.serviceWorker.register("sw.js").catch(function(){});
+    });
+  }
+</script>
+</body>
+</html>
